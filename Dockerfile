@@ -41,4 +41,5 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync
 
 EXPOSE 8000
-CMD ["fastapi", "run", "--workers", "4", "app/main.py"]
+ENV UVICORN_HOST=0.0.0.0 UVICORN_PORT=8000 UVICORN_LOG_LEVEL=info
+#for production: "--workers", "4"

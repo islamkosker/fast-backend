@@ -1,4 +1,8 @@
 #! /usr/bin/env bash
+
+bash scripts/lint.sh
+bash scripts/format.sh
+
 set -e
 set -x
 
